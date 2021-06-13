@@ -30,3 +30,9 @@
 2. From the CLI: `python3 manage.py makemigrations`
 3. From the CLI: `python3 manage.py migrate`
 4. Register model on the app admin.py file.
+
+### Creating Data
+1. On the app's views.py import the models' classes.
+2. Query the items in the database for the view.
+3. Separate the views for each CRUD action.
+4. When posting forms, remember to add the `{% csrf_token %}`

@@ -7,5 +7,17 @@
 </head>
 <body>
     <h1>Things I need to do:</h1>
+    <table>
+        {% for item in items %}
+            {% if item.done%}
+                <tr><td><strike>{{ item.name }}</strike></td></tr>
+            {% else %}
+                <tr><td>{{ item.name }}</td></tr>
+            {% endif %}
+        {% empty %}
+            <tr><td>You have nothing to do.</td></tr>
+        {% endfor %}
+    </table>
+    <a href="/add">Add new item</a>
 </body>
 </html>
