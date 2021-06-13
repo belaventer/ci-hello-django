@@ -41,3 +41,11 @@
 1. Create forms.py on the app directory.
 2. Crete the class for the form on the forms.py
 3. Import the class from forms.py on the views.py and update the function.
+
+### Testing
+1. On the app tests.py file, create the TestCase class.
+2. Run tests from the CLI: `python3 manage.py test` 
+3. The tests files can be separated by functionality.
+4. Install cooverage `pip3 install coverage`
+5. Run the tests `coverage run --source=<app_name> manage.py test`
+6. See report `coverage html`
