@@ -36,3 +36,8 @@
 2. Query the items in the database for the view.
 3. Separate the views for each CRUD action.
 4. When posting forms, remember to add the `{% csrf_token %}`
+
+### Modifying Data
+1. Create forms.py on the app directory.
+2. Crete the class for the form on the forms.py
+3. Import the class from forms.py on the views.py and update the function.
