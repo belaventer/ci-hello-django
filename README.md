@@ -17,4 +17,10 @@
 ### Templates
 1. Create the directory "templates", then "<app_name>" to hold your HTML templates within the app directory.
 2. Update the views to get the template with render(request, '<template_name>').
-3. On settings.py, include the created app as installed app
+3. On settings.py, include the created app as installed app.
+
+### Migrations and admin
+1. Run on the CLI: `python manage.py migrate`. Do this initially for default database setup.
+2. Create admin user from CLI: `python3 manage.py createsuperuser`
+3. Enter username, email (optional) and password.
+4. To login in, run the app and navigate to url /admin.
