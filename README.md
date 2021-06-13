@@ -24,3 +24,9 @@
 2. Create admin user from CLI: `python3 manage.py createsuperuser`
 3. Enter username, email (optional) and password.
 4. To login in, run the app and navigate to url /admin.
+
+### Models
+1. Inside the models.py of your app define the class for your model.
+2. From the CLI: `python3 manage.py makemigrations`
+3. From the CLI: `python3 manage.py migrate`
+4. Register model on the app admin.py file.
