@@ -49,3 +49,18 @@
 4. Install cooverage `pip3 install coverage`
 5. Run the tests `coverage run --source=<app_name> manage.py test`
 6. See report `coverage html`
+
+### Deployment
+1. Login to Heroku from CLI `heroku login -i`
+2. Install Postgress `pip3 install psycopg2-binary`
+3. Install green unicorn `pip3 install gunicorn`
+4. Generate requirements file `pip3 freeze --local > requirements.txt`
+5. On Heroku App, navigate to tab Resources and add Heroku Postgress to app
+6. Install database URL from CLI `pip3 install dj_database_url` and freeze again
+7. Include the database URL in settings.py
+8. Complete migrations with `python3 manage.py migrate`
+9. Create Procfile `web: gunicorn django_todo.wsgi:application`
+10. Include heroku host on the settings.py file
+11. Connect the Heroku to GitHub repo
+12. Use os.environ.get for databse url, secret key and allowed hosts.
+13. Push all.
